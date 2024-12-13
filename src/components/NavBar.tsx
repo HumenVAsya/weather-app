@@ -87,6 +87,7 @@ export const NavBar = ({ location }: Props) => {
           }, 500);
         } catch (error) {
           setLoadingCity(false);
+          console.error(error); 
         }
       });
     }
