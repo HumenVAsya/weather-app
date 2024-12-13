@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Weather App
 
-## Getting Started
+Welcome to the Weather App! This application provides up-to-date weather information for various locations. Built using modern technologies like Next.js, React, Tailwind CSS, and more, the Weather App offers a clean and intuitive user experience.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Technologies Used
+Next.js - The React Framework
+React - JavaScript library for building user interfaces
+Tailwind CSS - Utility-first CSS framework
+Axios - Promise-based HTTP client
+Jotai - Primitive and flexible state management for React
+MobX - Simple, scalable state management
+React Query - Data-fetching library for React
+Date-fns - Modern JavaScript date utility library
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Features
+- Real-time weather updates
+- Search functionality for different cities
+- Beautiful and responsive UI
+- Integration with weather APIs
+- Optimized performance using Next.js and React
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Getting Started
+To get a local copy of the project up and running, follow these simple steps.
 
-## Learn More
+Prerequisites
+Make sure you have the following installed on your machine:
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js (v14 or higher)
+- npm (v6 or higher) or yarn
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Installation
+Clone the repo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- git clone https://github.com/HumenVAsya/weather-app.git
 
-## Deploy on Vercel
+- cd weather-app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Install NPM packages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- npm install
+
+
+To start the development server, run:
+
+- npm run dev
+
+
+To build the project for production, run:
+
+- npm run build
+
+
+To start the production server, run:
+
+- npm start
+
