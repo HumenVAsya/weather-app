@@ -7,7 +7,7 @@ import axios from "axios";
 import { loadingCityAtom, placeAtom } from "@/stores/atom";
 import { useAtom } from "jotai";
 
-const API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
+const API_KEY = 'c1cee681e5341ba2e6332324944dd1b2'
 
 interface Item {
   name: string;

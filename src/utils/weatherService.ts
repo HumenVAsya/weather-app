@@ -1,7 +1,7 @@
 import axios from "axios";
 import { WeatherResponse } from "@/types/types";
 
-const API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
+const API_KEY = 'c1cee681e5341ba2e6332324944dd1b2';
 
 export const fetchWeatherData = async (location: string): Promise<WeatherResponse> => {
   const response = await axios.get(
