@@ -6,9 +6,12 @@ import { useState } from "react";
 import axios from "axios";
 import { loadingCityAtom, placeAtom } from "@/stores/atom";
 import { useAtom } from "jotai";
-import { setLazyProp } from "next/dist/server/api-utils";
 
 const API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
+
+interface Item {
+  name: string;
+}
 
 type Props = { location?: string };
 
@@ -18,8 +21,8 @@ export const NavBar = ({ location }: Props) => {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const [place, setPlace] = useAtom(placeAtom);
-  const [_, setLoadingCity] = useAtom(loadingCityAtom);
+  const [, setPlace] = useAtom(placeAtom);
+  const [, setLoadingCity] = useAtom(loadingCityAtom);
 
   async function handleInputChange(newValue: string) {
     setCity(newValue);
@@ -30,13 +33,16 @@ export const NavBar = ({ location }: Props) => {
           `https://api.openweathermap.org/data/2.5/find?q=${newValue}&appid=${API_KEY}`
         );
 
-        const suggestions = response.data.list.map((item: any) => item.name);
+        const suggestions = response.data.list.map((item: Item):string => item.name);
         setSuggestions(suggestions);
         setError("");
         setShowSuggestions(true);
+
+        
       } catch (error) {
         setSuggestions([]);
         setShowSuggestions(false);
+        throw new Error(`${error}`)
       }
     } else {
       setSuggestions([]);

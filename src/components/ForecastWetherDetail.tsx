@@ -24,12 +24,8 @@ export default function ForecastWetherDetail(
     day = "Tuesday",
     temp,
     feels_like,
-    temp_min,
-    temp_max,
     description,
   } = props;
-
-  console.log(13, description);
   return (
     <Container className="gap-4">
       <section className="flex gap-4 items-center px-4 ">

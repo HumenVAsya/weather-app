@@ -18,8 +18,8 @@ import { useAtom } from "jotai";
 import { loadingCityAtom, placeAtom } from "@/stores/atom";
 import { WeatherSkeleton } from "@/components/Sceleton";
 const Home = () => {
-  const [place, setPlace] = useAtom(placeAtom);
-  const [loadingCity, _] = useAtom(loadingCityAtom);
+  const [place] = useAtom(placeAtom);
+  const [loadingCity] = useAtom(loadingCityAtom);
   const { isLoading, data, refetch } = useQuery<WeatherResponse>(
     "repoData",
     () => fetchWeatherData(place)

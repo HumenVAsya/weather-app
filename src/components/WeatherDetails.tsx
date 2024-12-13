@@ -3,7 +3,7 @@ import { FiDroplet } from "react-icons/fi";
 import { ImMeter } from "react-icons/im";
 import { LuEye, LuSunrise, LuSunset } from "react-icons/lu";
 import { MdAir } from "react-icons/md";
-import Container from "./Container";
+
 
 export interface WeatherDetailProps {
   visiability: string;
